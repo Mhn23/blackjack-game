@@ -1,0 +1,23 @@
+
+body{
+    background-image: url(table.png);
+}
+
+
+
+.mainBox{
+    display: flex;
+    color: whitesmoke;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titleBox{
+    color: goldenrod;
+}
+
+.cardsAndSumBox{
+
+}
