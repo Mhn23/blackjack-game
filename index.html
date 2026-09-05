@@ -10,14 +10,14 @@
             <div class="titleBox">
                 <h1>Blackjack</h1>
             </div>
-            <h3>Are you ready to play a game of blackjack ?</h3>
+            <h3 id="status-el">Are you ready to play a game of blackjack ?</h3>
             <div class="cardsAndSumBox">
-                <p>Cards: <span></span></p>
-                <p>Sum: <span></span></p>
+                <p>Cards: <span id="listOfCards"></span></p> 
+                <p>Sum: <span id="sumOfCards"></span></p>
             </div>
             <div>
-                <button class="buttonsFormating">Start Game</button>
-                <button class="buttonsFormating">New Card</button>
+                <button class="buttonsFormating" onclick="renderGame()">Start Game</button>
+                <button class="buttonsFormating" onclick="newCard()">New Card</button>
             </div>
         </div>
     </body>
