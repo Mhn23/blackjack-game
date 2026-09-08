@@ -1,8 +1,9 @@
+const playerNameInput = sessionStorage.getItem("player_name")
 let playerData = {
-    name: "Test",
+    name: playerNameInput,
     chips: 100,
     addChips: function(){
-        this.chips += 10
+        this.chips += 50
     },
     removeChips: function(){
         this.chips -= 10
@@ -37,6 +38,9 @@ function renderGame(){
     cardsAndSumContent()
     playerName.textContent = playerData.name
     updateChips()
+    if(hasLost){
+        resetGame()
+    }
     if(sum === 21){
         statusText.textContent = "You won!"
         playerData.addChips()
@@ -83,5 +87,9 @@ function resetGame(){
     secondCard = getRandomNumber()
     cards = [firstCard,secondCard]
     sum = firstCard + secondCard
+    if(playerData.chips == 0){
+        alert("You got some free chips !")
+        playerData.chips = 50
+    }
     renderGame()
 }
